@@ -6,8 +6,7 @@ SET @TEXT := 'Here you can select a character template which will gear up, gem u
 SET @DISPLAY_ID := 24877;
 
 DELETE FROM `creature_template` WHERE `entry` = @ENTRY;
-INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `ScriptName`) VALUES
-(@ENTRY, @NAME , @SUBNAME, 'Speak', 0, 80, 80, 35, 1, 1, 1.14286, 1, 0, 1, 2, 7, 138936390, 1, 2, 'npc_talent_template');
+INSERT INTO `creature_template` (`entry`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `rank`, `unit_class`, `unit_flags`, `type`, `type_flags`, `RegenHealth`, `flags_extra`, `ScriptName`) VALUES(@ENTRY, @NAME, @SUBNAME, 'Speak', 0, 80, 80, 35, 1, 1, 1.14286, 0, 1, 2, 7, 138936390, 1, 2, 'npc_talent_template');
 
 DELETE FROM `creature_template_model` WHERE `CreatureID` = @ENTRY;
 INSERT INTO `creature_template_model` (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES
