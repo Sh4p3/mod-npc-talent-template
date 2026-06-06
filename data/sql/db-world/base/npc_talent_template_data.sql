@@ -1,7 +1,7 @@
 -- DATA
 SET @ENTRY := 55009;
 SET @NAME := 'Pick a spec';
-SET @SUBNAME := 'AzerothCore Template';
+SET @SUBNAME := 'FrozenCore Template';
 SET @TEXT := 'Here you can select a character template which will gear up, gem up, set talent specialization, and set glyphs for your character instantly.';
 SET @DISPLAY_ID := 24877;
 
